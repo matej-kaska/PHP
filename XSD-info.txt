@@ -1,1 +1,1 @@
-sequence, maxOccurs a minOccurs.
+sequence, maxOccurs a minOccurs
