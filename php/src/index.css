@@ -1,0 +1,36 @@
+.navbar {
+  min-height: 40px;
+}
+
+.ul-no-dots {
+  list-style-type: none;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  min-height: 2rem;
+}
+
+@keyframes move {
+  0% {
+  transform: translateX(0);
+  }
+  50% {
+  transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+img {
+animation: move 2s ease-in-out infinite;
+}

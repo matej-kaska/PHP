@@ -1,0 +1,20 @@
+.navbar {
+    min-height: 40px;
+}
+
+.ul-no-dots {
+    list-style-type: none;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    min-height: 2rem;
+}

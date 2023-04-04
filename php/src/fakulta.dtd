@@ -1,0 +1,30 @@
+<!ELEMENT school (school_name, fullname, location, faculties+)>
+<!ELEMENT location (country+, city+, address+)>
+<!ELEMENT city (#PCDATA)>
+<!ATTLIST city zip CDATA #REQUIRED>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!ELEMENT faculties (faculty+)>
+<!ELEMENT faculty (f_name+, katedry*)>
+<!ELEMENT f_name (#PCDATA)>
+<!ATTLIST f_name  shortcut CDATA #REQUIRED>
+
+<!ELEMENT katedry (katedra+)>
+<!ELEMENT katedra (k_name+,lektor*,teachers*)>
+<!ELEMENT k_name (#PCDATA)>
+<!ATTLIST k_name dekan CDATA #IMPLIED>
+<!ELEMENT lektor (#PCDATA)>
+
+<!ELEMENT teachers (teacher*)>
+<!ELEMENT teacher (t_name*,(t_telefon|t_email),pozice+)>
+<!ELEMENT t_name (#PCDATA)>
+<!ELEMENT t_telefon (#PCDATA)>
+<!ELEMENT t_email (#PCDATA)>
+<!ELEMENT pozice (#PCDATA)>
+
+<!ELEMENT students (student*)>
+<!ELEMENT student (s_name+,st+,s_email*)>
+<!ELEMENT s_name (#PCDATA)>
+<!ELEMENT st (#PCDATA)>
+<!ELEMENT s_email (#PCDATA)>
