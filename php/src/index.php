@@ -5,18 +5,55 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header class="navbar">
-        <nav>
-            <ul class="ul-no-dots">
-                <li>
-                    <a class="nav-item" href="index.php">Home</a>
-                    <a class="nav-item" href="skola.php">HTML files</a>
-                    <a class="nav-item" href="formular.php">Formular</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <h1>Fakultonahrávač</h1>
+    <div class="background-image"></div>
+    <nav class="navbar">
+        <ul class="ul-navbar">
+            <li class="li-navbar">
+                <a class="nav-item" onclick="window.scrollTo(0, document.getElementById('Fakultonahrávač').offsetTop - 84)">Home</a>
+                <a class="nav-item" onclick="window.scrollTo(0, document.getElementById('Nahrávač').offsetTop - 84)">Nahrávač</a>
+                <a class="nav-item" onclick="window.scrollTo(0, document.getElementById('Soubory').offsetTop - 84)">Soubory</a>
+                <a class="nav-item" onclick="window.scrollTo(0, document.getElementById('Formulář').offsetTop - 84)">Formulář</a>
+                <a class="nav-item" onclick="window.scrollTo(0, document.getElementById('Účet').offsetTop - 84)">Účet</a>
+            </li>
+        </ul>
+        <ul class="ul-account">
+            <li class="li-account">
+                <a class="login-button">Přihlásit se</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <header id="Fakultonahrávač" class="header">
+                <h1 class="title">Fakultonahrávač</h1>
+                <h2 class="title-name">Matěj Kaška</h2>
+            </header>
+        </section>
+        <section class="section">
+            <header id="Nahrávač" class="header-separator">
+                <h1 class="header-of-section">Nahrávač</h1>
+            </header>
+            ss
+        </section>
+        <section class="section">
+            <header id="Soubory" class="header-separator">
+                <h1 class="header-of-section">Soubory</h1>
+            </header>
+            ss
+        </section>
+        <section class="section">
+            <header id="Formulář" class="header-separator">
+                <h1 class="header-of-section">Formulář</h1>
+            </header>
+            ss
+        </section>
+        <section class="section">
+            <header id="Účet" class="header-separator">
+                <h1 class="header-of-section">Účet</h1>
+            </header>
+            ss
+        </section>
+    </main>
     <form enctype="multipart/form-data" method="POST">
         <label for="fakulta">Kliknutím nahrajte recept ve validním XML souboru.</label>
         <br>
@@ -24,9 +61,6 @@
         <br>
         <button type="submit">Validovat XML</button>
     </form>
-    <div style="display: flex;">
-        <img style="width: 35rem;" src = "svg/výkres.svg" alt="My Happy SVG"/>
-    </div>
     
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -79,7 +113,8 @@
     }
 ?>
 <footer>
-Copyright Matěj Kaška 1620
+    <div class="left-footer">Programování pro internet</div>
+    <div class="right-footer">Matěj Kaška 2023</div>
 </footer>
 </body>
 </html>

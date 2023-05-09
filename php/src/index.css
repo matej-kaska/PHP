@@ -1,22 +1,186 @@
-.navbar {
-  min-height: 40px;
+html {
+  scroll-behavior: smooth;
 }
 
-.ul-no-dots {
+body {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+/* BACKGROUND */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(static/background-image.webp);
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+  margin-top: 1rem;
+  margin-inline: 0.25rem;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.ul-navbar {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 12px;
+  padding-inline: 16px;
+  border-radius: 30px;
+  background-color: white;
+  border: black 1.5px solid;
+}
+
+.li-navbar {
+  display: flex;
+}
+
+.ul-account {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: black 1.5px solid;
+  margin: 0;
+  padding: 12px;
+  padding-inline: 16px;
+  border-radius: 30px;
+  margin-right: 1.25rem;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+
+.li-account {
+  display: flex;
+  cursor: pointer;
 }
 
 .nav-item {
-  margin-right: 10px;
+  margin-inline: 0.75rem;
+  font-family: 'Rasa';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  cursor: pointer;
 }
 
+.nav-item:hover {
+  color: gray;
+}
+
+.nav-item:active {
+  color: darkgray;
+}
+
+.login-button {
+  margin-left: auto;
+  margin-inline: 0.25rem;
+  font-family: 'Rasa';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.login-button:hover {
+  color: gray;
+}
+
+.login-button:active {
+  color: darkgray;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+  color: white;
+}
+
+.title {
+  margin: 0;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Rasa';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+}
+
+.title-name {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: 'Rasa';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* HEADER SEPARATOR */
+.header-separator {
+  width: 100%;
+  height: 5rem;
+  background-color: #FFE8D2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-of-section {
+  margin: 0;
+  font-family: 'Rasa';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  color: #F49B4A;
+}
+
+/* SECTION */
+.section {
+  height: 98vh;
+}
+
+/* FOOTER */
 footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  background-color: #FFE8D2;
+  color:#F49B4A;
   text-align: center;
   min-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-footer {
+  margin-left: 8px;
+}
+
+.right-footer {
+  margin-right: 8px;
 }
 
 @keyframes move {

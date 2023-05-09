@@ -38,10 +38,10 @@
                     <k_name>Katedra chemie</k_name>
                 </katedra>
                 <katedra>
-                    <k_name>Katedra informatiky</k_name>
+                    <k_name>Katedra matematiky</k_name>
                 </katedra>
                 <katedra>
-                    <k_name dekan="Michal Varady">Katedra matematiky</k_name>
+                    <k_name dekan="Michal Varady">Katedra informatiky</k_name>
                     <lektor></lektor>
                     <teachers>
                         <teacher>
