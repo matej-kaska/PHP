@@ -1,38 +1,5 @@
-<!DOCTYPE school
-[<!ELEMENT school (school_name, fullname, location, faculties+)>
-<!ELEMENT school_name (#PCDATA)>
-<!ELEMENT fullname (#PCDATA)>
-<!ELEMENT location (country+, city+, address+)>
-<!ELEMENT city (#PCDATA)>
-<!ATTLIST city zip CDATA #REQUIRED>
-<!ELEMENT country (#PCDATA)>
-<!ELEMENT address (#PCDATA)>
-
-<!ELEMENT faculties (faculty+)>
-<!ELEMENT faculty (f_name+, katedry*)>
-<!ELEMENT f_name (#PCDATA)>
-<!ATTLIST f_name  shortcut CDATA #REQUIRED>
-
-<!ELEMENT katedry (katedra+)>
-<!ELEMENT katedra (k_name+,lektor?,teachers?,students?)>
-<!ELEMENT k_name (#PCDATA)>
-<!ATTLIST k_name dekan CDATA #IMPLIED>
-<!ELEMENT lektor (#PCDATA)>
-
-<!ELEMENT teachers (teacher*)>
-<!ELEMENT teacher (t_name*,(t_telefon|t_email),pozice+)>
-<!ELEMENT t_name (#PCDATA)>
-<!ELEMENT t_telefon (#PCDATA)>
-<!ELEMENT t_email (#PCDATA)>
-<!ELEMENT pozice (#PCDATA)>
-
-<!ELEMENT students (student*)>
-<!ELEMENT student (s_name+,st+,s_email*)>
-<!ELEMENT s_name (#PCDATA)>
-<!ELEMENT st (#PCDATA)>
-<!ELEMENT s_email (#PCDATA)>
-]>
-
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE school SYSTEM "sablony/DTD.dtd">
 <school>
     <school_name>UJEP</school_name>
     <fullname>Univerzita Jana Evangelisty Purkyně v Ústí nad Labem</fullname>
@@ -43,41 +10,36 @@
     </location>
     <faculties>
         <faculty>
-            <f_name shortcut="FSI">Fakulta strojního inženýrství</f_name>
-        </faculty>
-        <faculty>
-            <f_name shortcut="FZP">Fakulta životního prostředí</f_name>
-        </faculty>
-        <faculty>
-            <f_name shortcut="FUD">Fakulta umění a designu</f_name>
-        </faculty>
-        <faculty>
-            <f_name shortcut="FF">Filozofická fakulta</f_name>
-        </faculty>
-        <faculty>
-            <f_name shortcut="FZS">Fakulta zdravotních studií</f_name>
-        </faculty>	
-        <faculty>
             <f_name shortcut="FAV">Přírodovědecká fakulta</f_name>
             <katedry>
                 <katedra>
                     <k_name>Katedra biologie</k_name>
+                    <teachers/>
+                    <students><student><s_name>Jakub Havel</s_name><st>st78153</st><s_email>havel.jakub@gmail.com</s_email></student></students>
                 </katedra>
                 <katedra>
                     <k_name>Katedra fyziky</k_name>
+                    <teachers><teacher><t_name>Pavel Jaššo</t_name><t_telefon>420420420</t_telefon><pozice>Plešista</pozice></teacher></teachers>
+                    <students/>
                 </katedra>
                 <katedra>
                     <k_name>Katedra geografie</k_name>
+                    <teachers/>
+                    <students/>
                 </katedra>
                 <katedra>
                     <k_name>Katedra chemie</k_name>
+                    <teachers><teacher><t_name>Marek Hašek</t_name><t_telefon>702513146</t_telefon><pozice>vedoucí katedry</pozice></teacher><teacher><t_name>Martin Holz</t_name><t_telefon>735265365</t_telefon><pozice>Vyučující</pozice></teacher></teachers>
+                    <students/>
                 </katedra>
                 <katedra>
-                    <k_name>Katedra informatiky</k_name>
+                    <k_name>Katedra matematiky</k_name>
+                    <teachers/>
+                    <students/>
                 </katedra>
                 <katedra>
-                    <k_name dekan="Michal Varady">Katedra matematiky</k_name>
-                    <lektor></lektor>
+                    <k_name dekan="Michal Varady">Katedra informatiky</k_name>
+                    <lektor/>
                     <teachers>
                         <teacher>
                             <t_name>Pavel Beránek</t_name>
@@ -106,10 +68,25 @@
                             <st>st516516</st>
                             <s_email>moravec@gmail.com</s_email>
                         </student>
-                    </students>
+                    <student><s_name>Igor Novák</s_name><st>st65812</st><s_email>igurek@novacek.cz</s_email></student></students>
                 </katedra>
             </katedry>
         </faculty>
+        <faculty>
+            <f_name shortcut="FSI">Fakulta strojního inženýrství</f_name>
+        </faculty>
+        <faculty>
+            <f_name shortcut="FZP">Fakulta životního prostředí</f_name>
+        </faculty>
+        <faculty>
+            <f_name shortcut="FUD">Fakulta umění a designu</f_name>
+        </faculty>
+        <faculty>
+            <f_name shortcut="FF">Filozofická fakulta</f_name>
+        </faculty>
+        <faculty>
+            <f_name shortcut="FZS">Fakulta zdravotních studií</f_name>
+        </faculty>	
         <faculty>
             <f_name shortcut="PF">Pedagogická fakulta</f_name>
         </faculty>

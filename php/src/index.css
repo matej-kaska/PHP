@@ -7,8 +7,8 @@ body {
   margin-bottom: 2rem;
 }
 
-.bold {
-  font-weight: bold !important;
+.pointer {
+  cursor: pointer;
 }
 
 /* BACKGROUND */
@@ -59,16 +59,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black 1.5px solid;
   margin: 0;
   padding: 12px;
   padding-inline: 16px;
   border-radius: 30px;
   margin-right: 1.25rem;
-  background-color: white;
   position: absolute;
   top: 0px;
   right: 0;
+  background-color: #F49B4A;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.ul-account:hover {
+  background-color:#F38E32;
+}
+
+.ul-account:active {
+  background-color:#F49B4A;
+}
+
+.logout {
+  background-color: white;
+  color: black;
+  border: black 1.5px solid;
+}
+
+.logout:hover {
+  background-color: lightgray;
+}
+
+.logout:active {
+  background-color: gray;
 }
 
 .li-account {
@@ -92,14 +116,6 @@ body {
 .login-button {
   margin-left: auto;
   margin-inline: 0.25rem;
-}
-
-.login-button:hover {
-  color: gray;
-}
-
-.login-button:active {
-  color: darkgray;
 }
 
 /* HEADER */
@@ -160,7 +176,7 @@ body {
 .blobs-container {
   display: flex;
   justify-content: space-evenly;
-  height: 100%;
+  height: 77vh;
   align-items: center;
 }
 
@@ -218,15 +234,33 @@ img {
 
 .html-select {
   width: 30vh;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 1rem;
   background-color:#FFE8D2;
-  overflow: hidden;
+  overflow: auto;
   border:#F49B4A 1.5px solid;
 }
 
 .html-select:focus {
   outline: none;
+}
+
+.html-select::-webkit-scrollbar {
+  margin: 8px;
+  width: 0.25rem;
+  border-radius: 100px;
+  height: 10px;
+}
+
+.html-select::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #F49B4A;
+  border-radius: 100px;
+  height: 10px;
+}
+ 
+.html-select::-webkit-scrollbar-thumb {
+  background-color: #F2811A;
+  border-radius: 100px;
 }
 
 option {
@@ -255,6 +289,10 @@ option {
   outline:none
 }
 
+.select-form {
+  width: 28vh;
+}
+
 .form-button {
   margin-left: auto;
   background-color: #F49B4A;
@@ -277,6 +315,73 @@ option {
 .account-column {
   align-items: flex-start;
   margin-right: 1rem;;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #F2811A;
+  border-radius: 20px;
+}
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.modal-label {
+  margin-block: 0.75rem;
+}
+
+.modal-buttons {
+  margin-inline: auto;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  transform: translate(450%, -0%);
+}
+
+.secondary {
+  margin-left: auto;
+  background-color: white;
+  color: black;
+  border: black 1.5px solid;
+  cursor: pointer;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 15px;
+}
+
+.secondary:hover {
+  background-color: lightgray;
+}
+
+.secondary:active {
+  background-color: gray;
 }
 
 /* FOOTER */
