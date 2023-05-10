@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSD</title>
+</head>
+<body>
+    <main>
+        <p>
+            &lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
+                &lt;xs:element name=&quot;school&quot;&gt;<br>
+                    &lt;xs:complexType&gt;<br>
+                        &lt;xs:sequence&gt;<br>
+                            &lt;xs:element name=&quot;school_name&quot; type=&quot;xs:string&quot;/&gt;<br>
+                            &lt;xs:element name=&quot;fullname&quot; type=&quot;xs:string&quot;/&gt;<br>
+                            &lt;xs:element name=&quot;location&quot;&gt;<br>
+                                &lt;xs:complexType&gt;<br>
+                                    &lt;xs:sequence&gt;<br>
+                                        &lt;xs:element name=&quot;country&quot; type=&quot;xs:string&quot;/&gt;<br>
+                                        &lt;xs:element name=&quot;city&quot;&gt;<br>
+                                            &lt;xs:complexType&gt;<br>
+                                                &lt;xs:simpleContent&gt;<br>
+                                                    &lt;xs:extension base=&quot;xs:string&quot;&gt;<br>
+                                                        &lt;xs:attribute name=&quot;zip&quot; type=&quot;xs:positiveInteger&quot;/&gt;<br>
+                                                    &lt;/xs:extension&gt;<br>
+                                                &lt;/xs:simpleContent&gt;<br>
+                                            &lt;/xs:complexType&gt;<br>
+                                        &lt;/xs:element&gt;<br>
+                                        &lt;xs:element name=&quot;address&quot; type=&quot;xs:string&quot;/&gt;<br>
+                                    &lt;/xs:sequence&gt;<br>
+                                &lt;/xs:complexType&gt;<br>
+                            &lt;/xs:element&gt;<br>
+                            &lt;xs:element name=&quot;faculties&quot; minOccurs=&quot;0&quot;&gt;<br>
+                                &lt;xs:complexType&gt;<br>
+                                    &lt;xs:sequence&gt;<br>
+                                        &lt;xs:element name=&quot;faculty&quot; maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;&gt;<br>
+                                            &lt;xs:complexType&gt;<br>
+                                                &lt;xs:sequence&gt;<br>
+                                                    &lt;xs:element name=&quot;f_name&quot;&gt;<br>
+                                                        &lt;xs:complexType&gt;<br>
+                                                            &lt;xs:simpleContent&gt;<br>
+                                                                &lt;xs:extension base=&quot;xs:string&quot;&gt;<br>
+                                                                    &lt;xs:attribute name=&quot;shortcut&quot; type=&quot;xs:string&quot;/&gt;<br>
+                                                                &lt;/xs:extension&gt;<br>
+                                                            &lt;/xs:simpleContent&gt;<br>
+                                                        &lt;/xs:complexType&gt;<br>
+                                                    &lt;/xs:element&gt;<br>
+                                                    &lt;xs:element name=&quot;katedry&quot; minOccurs=&quot;0&quot;&gt;<br>
+                                                        &lt;xs:complexType&gt;<br>
+                                                            &lt;xs:sequence&gt;<br>
+                                                                &lt;xs:element name=&quot;katedra&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;<br>
+                                                                    &lt;xs:complexType&gt;<br>
+                                                                        &lt;xs:sequence&gt;<br>
+                                                                            &lt;xs:element name=&quot;k_name&quot;&gt;<br>
+                                                                                &lt;xs:complexType&gt;<br>
+                                                                                    &lt;xs:simpleContent&gt;<br>
+                                                                                        &lt;xs:extension base=&quot;xs:string&quot;&gt;<br>
+                                                                                            &lt;xs:attribute name=&quot;dekan&quot; use=&quot;optional&quot;/&gt;<br>
+                                                                                        &lt;/xs:extension&gt;<br>
+                                                                                    &lt;/xs:simpleContent&gt;<br>
+                                                                                &lt;/xs:complexType&gt;<br>
+                                                                            &lt;/xs:element&gt;<br>
+                                                                            &lt;xs:element name=&quot;lektor&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot;/&gt;<br>
+                                                                            &lt;xs:element name=&quot;teachers&quot; minOccurs=&quot;0&quot;&gt;<br>
+                                                                                &lt;xs:complexType&gt;<br>
+                                                                                    &lt;xs:sequence&gt;<br>
+                                                                                        &lt;xs:element name=&quot;teacher&quot; maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;&gt;<br>
+                                                                                            &lt;xs:complexType&gt;<br>
+                                                                                                &lt;xs:sequence&gt;<br>
+                                                                                                    &lt;xs:element name=&quot;t_name&quot;/&gt;<br>
+                                                                                                    &lt;xs:element name=&quot;t_telefon&quot;/&gt;<br>
+                                                                                                    &lt;xs:element name=&quot;pozice&quot;/&gt;<br>
+                                                                                                &lt;/xs:sequence&gt;<br>
+                                                                                            &lt;/xs:complexType&gt;<br>
+                                                                                        &lt;/xs:element&gt;<br>
+                                                                                    &lt;/xs:sequence&gt;<br>
+                                                                                &lt;/xs:complexType&gt;<br>
+                                                                            &lt;/xs:element&gt;<br>
+                                                                            &lt;xs:element name=&quot;students&quot; minOccurs=&quot;0&quot;&gt;<br>
+                                                                                &lt;xs:complexType&gt;<br>
+                                                                                    &lt;xs:sequence&gt;<br>
+                                                                                        &lt;xs:element name=&quot;student&quot; maxOccurs=&quot;unbounded&quot; minOccurs=&quot;0&quot;&gt;<br>
+                                                                                            &lt;xs:complexType&gt;<br>
+                                                                                                &lt;xs:sequence&gt;<br>
+                                                                                                    &lt;xs:element name=&quot;s_name&quot;/&gt;<br>
+                                                                                                    &lt;xs:element name=&quot;st&quot;/&gt;<br>
+                                                                                                    &lt;xs:element name=&quot;s_email&quot;/&gt;<br>
+                                                                                                &lt;/xs:sequence&gt;<br>
+                                                                                            &lt;/xs:complexType&gt;<br>
+                                                                                        &lt;/xs:element&gt;<br>
+                                                                                    &lt;/xs:sequence&gt;<br>
+                                                                                &lt;/xs:complexType&gt;<br>
+                                                                            &lt;/xs:element&gt;<br>
+                                                                        &lt;/xs:sequence&gt;<br>
+                                                                    &lt;/xs:complexType&gt;<br>
+                                                                &lt;/xs:element&gt;<br>
+                                                            &lt;/xs:sequence&gt;<br>
+                                                        &lt;/xs:complexType&gt;<br>
+                                                    &lt;/xs:element&gt;<br>
+                                                &lt;/xs:sequence&gt;<br>
+                                            &lt;/xs:complexType&gt;<br>
+                                        &lt;/xs:element&gt;<br>
+                                    &lt;/xs:sequence&gt;<br>
+                                &lt;/xs:complexType&gt;<br>
+                            &lt;/xs:element&gt;<br>
+                        &lt;/xs:sequence&gt;<br>
+                    &lt;/xs:complexType&gt;<br>
+                &lt;/xs:element&gt;<br>
+            &lt;/xs:schema&gt;<br>
+        </p>
+    </main>
+</body>
+</html>

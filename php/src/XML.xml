@@ -1,63 +1,59 @@
+<?xml version="1.0"?>
 <school>
     <school_name>UJEP</school_name>
-    <fullname>Univerzita Jana Evangelisty Purkyně v Ústí nad Labem</fullname>
+    <fullname>Univerzita Jana Evangelisty Purkyn&#x11B; v &#xDA;st&#xED; nad Labem</fullname>
     <location>
-        <country>Česká republika</country>
-        <city zip="40096">Ústí nad Labem</city>
+        <country>&#x10C;esk&#xE1; republika</country>
+        <city zip="40096">&#xDA;st&#xED; nad Labem</city>
         <address>Pasteurova 3544/1</address>
     </location>
     <faculties>
         <faculty>
-            <f_name shortcut="FSI">Fakulta strojního inženýrství</f_name>
-        </faculty>
-        <faculty>
-            <f_name shortcut="FZP">Fakulta životního prostředí</f_name>
-        </faculty>
-        <faculty>
-            <f_name shortcut="FUD">Fakulta umění a designu</f_name>
-        </faculty>
-        <faculty>
-            <f_name shortcut="FF">Filozofická fakulta</f_name>
-        </faculty>
-        <faculty>
-            <f_name shortcut="FZS">Fakulta zdravotních studií</f_name>
-        </faculty>	
-        <faculty>
-            <f_name shortcut="FAV">Přírodovědecká fakulta</f_name>
+            <f_name shortcut="FAV">P&#x159;&#xED;rodov&#x11B;deck&#xE1; fakulta</f_name>
             <katedry>
                 <katedra>
                     <k_name>Katedra biologie</k_name>
+                    <teachers/>
+                    <students><student><s_name>Jakub Havel</s_name><st>st78153</st><s_email>havel.jakub@gmail.com</s_email></student></students>
                 </katedra>
                 <katedra>
                     <k_name>Katedra fyziky</k_name>
+                    <teachers><teacher><t_name>Pavel Ja&#x161;&#x161;o</t_name><t_telefon>420420420</t_telefon><pozice>Ple&#x161;ista</pozice></teacher></teachers>
+                    <students/>
                 </katedra>
                 <katedra>
                     <k_name>Katedra geografie</k_name>
+                    <teachers/>
+                    <students/>
                 </katedra>
                 <katedra>
                     <k_name>Katedra chemie</k_name>
+                    <teachers><teacher><t_name>Marek Ha&#x161;ek</t_name><t_telefon>702513146</t_telefon><pozice>vedouc&#xED; katedry</pozice></teacher><teacher><t_name>Martin Holz</t_name><t_telefon>735265365</t_telefon><pozice>Vyu&#x10D;uj&#xED;c&#xED;</pozice></teacher></teachers>
+                    <students/>
                 </katedra>
                 <katedra>
-                    <k_name>Katedra informatiky</k_name>
+                    <k_name>Katedra matematiky</k_name>
+                    <teachers/>
+                    <students/>
                 </katedra>
                 <katedra>
-                    <k_name dekan="Michal Varady">Katedra matematiky</k_name>
-                    <lektor></lektor>
+                    <k_name dekan="Michal Varady">Katedra informatiky</k_name>
+                    <lektor/>
                     <teachers>
                         <teacher>
-                            <t_name>Pavel Beránek</t_name>
+                            <t_name>Pavel Ber&#xE1;nek</t_name>
                             <t_telefon>00000000</t_telefon>
                             <pozice>specialista</pozice>
                         </teacher>
                         <teacher>
-                            <t_name>Jiří Škvor</t_name>
+                            <t_name>Ji&#x159;&#xED; &#x160;kvor</t_name>
                             <t_telefon>000000</t_telefon>
-                            <pozice>vedoucí katedry</pozice>
+                            <pozice>vedouc&#xED; katedry</pozice>
                         </teacher>
                     </teachers>
                     <students>
                         <student>
-                            <s_name>Matěj Kaška</s_name>
+                            <s_name>Mat&#x11B;j Ka&#x161;ka</s_name>
                             <st>st96116</st>
                             <s_email>nkaskaj@gmail.com</s_email>
                         </student>
@@ -71,15 +67,30 @@
                             <st>st516516</st>
                             <s_email>moravec@gmail.com</s_email>
                         </student>
-                    </students>
+                    <student><s_name>Igor Nov&#xE1;k</s_name><st>st65812</st><s_email>igurek@novacek.cz</s_email></student></students>
                 </katedra>
             </katedry>
         </faculty>
         <faculty>
-            <f_name shortcut="PF">Pedagogická fakulta</f_name>
+            <f_name shortcut="FSI">Fakulta strojn&#xED;ho in&#x17E;en&#xFD;rstv&#xED;</f_name>
         </faculty>
         <faculty>
-            <f_name shortcut="FSE">Fakulta sociálně ekonomická</f_name>
+            <f_name shortcut="FZP">Fakulta &#x17E;ivotn&#xED;ho prost&#x159;ed&#xED;</f_name>
+        </faculty>
+        <faculty>
+            <f_name shortcut="FUD">Fakulta um&#x11B;n&#xED; a designu</f_name>
+        </faculty>
+        <faculty>
+            <f_name shortcut="FF">Filozofick&#xE1; fakulta</f_name>
+        </faculty>
+        <faculty>
+            <f_name shortcut="FZS">Fakulta zdravotn&#xED;ch studi&#xED;</f_name>
+        </faculty>	
+        <faculty>
+            <f_name shortcut="PF">Pedagogick&#xE1; fakulta</f_name>
+        </faculty>
+        <faculty>
+            <f_name shortcut="FSE">Fakulta soci&#xE1;ln&#x11B; ekonomick&#xE1;</f_name>
         </faculty>
     </faculties>
 </school>

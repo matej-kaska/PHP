@@ -16,38 +16,46 @@
                     <li>PSČ: <xsl:value-of select="school/location/city/@zip"/></li>
                     <li>Adresa: <xsl:value-of select="school/location/address"/></li>
                 </ul>
-                <h2 class="ml-2">Fakulty</h2>
-                <ul>
+                <h2 class="ml-1">Fakulty</h2>
                     <xsl:for-each select="school/faculties/faculty">
-                        <li class="ml-2"><xsl:value-of select="f_name"/> (<xsl:value-of select="f_name/@shortcut"/>)</li>
                         <ul>
+                        <li class="ml-2"><xsl:value-of select="f_name"/> (<xsl:value-of select="f_name/@shortcut"/>)
                             <xsl:if test="katedry">
-                                <li class="ml-2">Fakulty:</li>
                                 <ul>
-                                    <xsl:for-each select="katedry/katedra">
-                                        <li class="ml-2"><xsl:value-of select="k_name"/></li>
-                                        <xsl:if test="teachers">
-                                            <li class="ml-3">Teachers:</li>
-                                            <ul>
-                                                <xsl:for-each select="teachers/teacher">
-                                                    <li class="ml-4"><xsl:value-of select="t_name"/> - <xsl:value-of select="pozice"/></li>
-                                                </xsl:for-each>
-                                            </ul>
-                                        </xsl:if>
-                                        <xsl:if test="students">
-                                            <li class="ml-3">Students:</li>
-                                            <ul>
-                                                <xsl:for-each select="students/student">
-                                                    <li class="ml-4"><xsl:value-of select="s_name"/> - <xsl:value-of select="st"/></li>
-                                                </xsl:for-each>
-                                            </ul>
-                                        </xsl:if>
-                                    </xsl:for-each>
-                                </ul>
-                            </xsl:if>
+                                    <li class="ml-2">Katedry:</li>
+                                        <ul>
+                                            <xsl:for-each select="katedry/katedra">
+                                                <li class="ml-2"><xsl:value-of select="k_name"/>
+                                                    <xsl:if test="teachers/teacher">
+                                                        <ul>
+                                                            <li class="ml-3">Vyučující:
+                                                                <ul>
+                                                                <xsl:for-each select="teachers/teacher">
+                                                                    <li class="ml-4"><xsl:value-of select="t_name"/> - <xsl:value-of select="pozice"/> (<xsl:value-of select="t_telefon"/>)</li>
+                                                                </xsl:for-each>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </xsl:if>
+                                                    <xsl:if test="students/student">
+                                                        <ul>
+                                                            <li class="ml-3">Studenti:
+                                                            <ul>
+                                                                <xsl:for-each select="students/student">
+                                                                    <li class="ml-4"><xsl:value-of select="s_name"/> - <xsl:value-of select="st"/> (<xsl:value-of select="s_email"/>)</li>
+                                                                </xsl:for-each>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </xsl:if>
+                                                </li>
+                                            </xsl:for-each>
+                                        </ul>
+                                    </ul>
+                                </xsl:if>
+                            </li>
                         </ul>
                     </xsl:for-each>
-                </ul>
             </body>
         </html>
     </xsl:template>

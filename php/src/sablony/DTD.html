@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTD</title>
+</head>
+<body>
+    <main>
+        <p>
+            &lt;!ELEMENT school (school_name, fullname, location, faculties+)&gt;
+            <br>
+            &lt;!ELEMENT school_name (#PCDATA)&gt;
+            <br>
+            &lt;!ELEMENT fullname (#PCDATA)&gt;
+            <br>
+            &lt;!ELEMENT location (country+, city+, address+)&gt;
+            <br>
+            &lt;!ELEMENT city (#PCDATA)&gt;
+            <br>
+            &lt;!ATTLIST city zip CDATA #REQUIRED&gt;
+            <br>
+            &lt;!ELEMENT country (#PCDATA)&gt;
+            <br>
+            &lt;!ELEMENT address (#PCDATA)&gt;
+            <br>
+            <br>
+            &lt;!ELEMENT faculties (faculty+)&gt;
+            <br>
+            &lt;!ELEMENT faculty (f_name+, katedry*)&gt;
+            <br>
+            &lt;!ELEMENT f_name (#PCDATA)&gt;
+            <br>
+            &lt;!ATTLIST f_name  shortcut CDATA #REQUIRED&gt;
+            <br>
+            <br>
+            &lt;!ELEMENT katedry (katedra+)&gt;
+            <br>
+            &lt;!ELEMENT katedra (k_name+,lektor?,teachers?,students?)&gt;
+            <br>
+            &lt;!ELEMENT k_name (#PCDATA)&gt;
+            <br>
+            &lt;!ATTLIST k_name dekan CDATA #IMPLIED&gt;
+            <br>
+            &lt;!ELEMENT lektor (#PCDATA)&gt;
+            <br>
+            <br>
+            &lt;!ELEMENT teachers (teacher*)&gt;
+            <br>
+            &lt;!ELEMENT teacher (t_name*,(t_telefon|t_email),pozice+)&gt;
+            <br>
+            &lt;!ELEMENT t_name (#PCDATA)&gt;
+            <br>
+            &lt;!ELEMENT t_telefon (#PCDATA)&gt;
+            <br>
+            &lt;!ELEMENT t_email (#PCDATA)&gt;
+            <br>
+            &lt;!ELEMENT pozice (#PCDATA)&gt;
+            <br>
+            <br>
+            &lt;!ELEMENT students (student*)&gt;
+            <br>
+            &lt;!ELEMENT student (s_name+,st+,s_email*)&gt;
+            <br>
+            &lt;!ELEMENT s_name (#PCDATA)&gt;
+            <br>
+            &lt;!ELEMENT st (#PCDATA)&gt;
+            <br>
+            &lt;!ELEMENT s_email (#PCDATA)&gt;
+            <br>
+        </p>
+    </main>
+</body>
+</html>
